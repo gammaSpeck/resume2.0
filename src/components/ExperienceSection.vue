@@ -7,10 +7,21 @@
     </div>
 
     <div class="d-flex flex-column justify-start ga-5">
-      <div>
+      <div class="d-flex flex-column">
         <div class="text-h6 font-weight-medium">Ollion</div>
 
-        <v-timeline side="end" align="start" class="custom-timeline">
+        <div class="d-flex flex-column ga-2">
+          <ExpCard
+            v-for="exp in exps"
+            :key="exp.id"
+            :exp="exp"
+            :title="exp.title"
+            :timeline="exp.timeline"
+            :desc="exp.desc"
+          />
+        </div>
+
+        <!-- <v-timeline side="end" align="start" class="custom-timeline">
           <v-timeline-item
             v-for="exp in exps"
             :key="exp.id"
@@ -26,7 +37,7 @@
               :desc="exp.desc"
             />
           </v-timeline-item>
-        </v-timeline>
+        </v-timeline> -->
       </div>
     </div>
   </div>

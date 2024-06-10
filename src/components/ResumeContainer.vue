@@ -32,6 +32,8 @@
       </v-col>
     </v-row>
 
+    <!-- ********** -->
+
     <v-row>
       <v-col :cols="leftSectionColSpan">
         <ExperienceSection />
@@ -91,7 +93,7 @@ watch(xs, (isXs) => {
 
 <style scoped lang="scss">
 .container {
-  height: 100%;
+  // height: 100%;
   background-color: #fff;
   max-width: 960px;
   min-height: 1123px;

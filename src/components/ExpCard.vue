@@ -1,7 +1,15 @@
 <template>
   <div class="d-inline-flex flex-column">
     <div class="text-body-1 font-weight-medium">{{ title }}</div>
-    <div class="text-caption font-weight-light">{{ timeline }}</div>
+    <div class="text-caption font-weight-light">
+      <v-icon
+        size="small"
+        icon="mdi-calendar-range"
+        class="text-primary"
+      ></v-icon>
+
+      {{ timeline }}
+    </div>
 
     <div class="text-body-2">
       {{ desc }}
