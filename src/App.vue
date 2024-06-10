@@ -10,8 +10,10 @@
 import ResumeContainer from "./components/ResumeContainer.vue";
 </script>
 
-<style scoped lang="scss">
-// .main {
-//   background: lightgrey;
-// }
+<style lang="scss">
+.custom-timeline-item {
+  & > .v-timeline-item__body {
+    padding: 0 0 0 5px !important;
+  }
+}
 </style>

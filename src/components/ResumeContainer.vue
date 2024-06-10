@@ -32,10 +32,18 @@
       </v-col>
     </v-row>
 
-    <v-row class="row-80">
+    <v-row>
+      <v-col :cols="leftSectionColSpan">
+        <ExperienceSection />
+      </v-col>
+
       <v-col>
-        <!-- Content for the second row (80% height) -->
-        Second Row
+        <f-div class="text-body-1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis,
+          dicta porro sint voluptatem esse praesentium temporibus vel omnis
+          facilis possimus adipisci at dolorum amet minus nulla. Iure quo
+          ducimus expedita!
+        </f-div>
       </v-col>
     </v-row>
   </v-container>
@@ -46,10 +54,13 @@ import { ref, watch } from "vue";
 import LinkElement from "./LinkElement.vue";
 
 import { useDisplay } from "vuetify";
+import ExperienceSection from "./ExperienceSection.vue";
 
 const { xs } = useDisplay();
 
 const colOrder = ref({ image: 2, info: 1 });
+const DEFAULT_COL_SPAN = 7;
+const leftSectionColSpan = ref(DEFAULT_COL_SPAN);
 
 const linkElements = [
   { icon: "mdi-phone", title: "+91-9738575801", link: "tel:+919738575801" },
@@ -74,6 +85,7 @@ const linkElements = [
 // Done to ensure in Responsive mode, the image comes on TOP
 watch(xs, (isXs) => {
   colOrder.value = isXs ? { image: 1, info: 2 } : { image: 2, info: 1 };
+  leftSectionColSpan.value = isXs ? 12 : DEFAULT_COL_SPAN;
 });
 </script>
 
@@ -81,7 +93,7 @@ watch(xs, (isXs) => {
 .container {
   height: 100%;
   background-color: #fff;
-  max-width: 794px;
+  max-width: 960px;
   min-height: 1123px;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -102,10 +114,9 @@ watch(xs, (isXs) => {
   }
 }
 
-.row-80 {
-  flex: 1;
-  max-height: 80%;
-}
+// .min-width-20-rem {
+//   min-width: 20rem !important;
+// }
 
 /* Print styles */
 // @media print {
