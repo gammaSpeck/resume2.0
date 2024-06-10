@@ -1,6 +1,6 @@
 <template>
   <v-container class="container">
-    <v-row class="row-20">
+    <v-row>
       <v-col xs="12" sm="8" md="8" :order="colOrder.info">
         <div class="d-flex-inline mb-1">
           <div class="text-h4 font-weight-bold">Madhusoodhanan KM</div>
@@ -26,11 +26,8 @@
         align-self="center"
         class="d-flex align-center justify-center"
       >
-        <v-avatar size="150">
-          <v-img
-            alt="Madhu KM"
-            src="https://cdn.vuetifyjs.com/images/john.jpg"
-          ></v-img>
+        <v-avatar size="125">
+          <v-img alt="Madhu KM" src="@/assets/avatar.jpeg"></v-img>
         </v-avatar>
       </v-col>
     </v-row>
@@ -103,13 +100,6 @@ watch(xs, (isXs) => {
     // Breakpoint for xs and below
     padding: 1rem;
   }
-}
-
-.row-20 {
-  // TODO: Remove
-  // border-style: solid;
-  flex: 0 0 20%;
-  min-height: 20%;
 }
 
 .row-80 {
