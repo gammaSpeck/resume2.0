@@ -11,26 +11,12 @@
 
         <div class="d-flex flex-wrap gc-4">
           <LinkElement
-            icon="mdi-phone"
-            title="+91-9738575801"
-            link="tel:+919738575801"
+            v-for="elm in linkElements"
+            :key="elm.icon"
+            :icon="elm.icon"
+            :title="elm.title"
+            :link="elm.link"
           />
-          <LinkElement
-            icon="mdi-github"
-            title="gammaSpeck"
-            link="https://github.com/gammaSpeck"
-          />
-          <LinkElement
-            icon="mdi-linkedin"
-            title="madhusoodhanan-km"
-            link="https://www.linkedin.com/in/madhusoodhanan-km"
-          />
-          <LinkElement
-            icon="mdi-email"
-            title="tech@madhukm.com"
-            link="mailto:tech@madhukm.com"
-          />
-          <LinkElement icon="mdi-home" title="Bengaluru, Karnataka, India" />
         </div>
       </v-col>
 
@@ -66,14 +52,31 @@ import { useDisplay } from "vuetify";
 
 const { xs } = useDisplay();
 
+const colOrder = ref({ image: 2, info: 1 });
+
+const linkElements = [
+  { icon: "mdi-phone", title: "+91-9738575801", link: "tel:+919738575801" },
+  {
+    icon: "mdi-github",
+    title: "gammaSpeck",
+    link: "https://github.com/gammaSpeck",
+  },
+  {
+    icon: "mdi-linkedin",
+    title: "madhusoodhanan-km",
+    link: "https://www.linkedin.com/in/madhusoodhanan-km",
+  },
+  {
+    icon: "mdi-email",
+    title: "tech@madhukm.com",
+    link: "mailto:tech@madhukm.com",
+  },
+  { icon: "mdi-home", title: "Bengaluru, Karnataka, India" },
+];
+
 // Done to ensure in Responsive mode, the image comes on TOP
 watch(xs, (isXs) => {
   colOrder.value = isXs ? { image: 1, info: 2 } : { image: 2, info: 1 };
-});
-
-const colOrder = ref({
-  image: 2,
-  info: 1,
 });
 </script>
 
