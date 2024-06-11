@@ -9,8 +9,9 @@
           </div>
           <div class="text-body-2">
             Tech aficionado embracing the full-stack frenzy of
-            2024—conceptualizing, R&D, coding, testing, and cloud deployment. A
-            one-person IT army, reveling in the end-to-end adventure.
+            {{ new Date().getFullYear() }}—conceptualizing, R&D, coding,
+            testing, and cloud deployment. A one-person IT army, reveling in the
+            end-to-end adventure.
           </div>
         </div>
 
@@ -32,7 +33,7 @@
         class="d-flex align-center justify-center"
       >
         <v-avatar size="125">
-          <v-img alt="Madhu KM" src="@/assets/avatar.jpeg"></v-img>
+          <v-img alt="Madhu KM" src="@/assets/avatar3.jpeg"></v-img>
         </v-avatar>
       </v-col>
     </v-row>
