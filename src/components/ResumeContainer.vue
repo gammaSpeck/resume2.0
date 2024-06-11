@@ -35,17 +35,13 @@
     <!-- ********** -->
 
     <v-row>
-      <v-col :cols="leftSectionColSpan">
+      <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-4">
         <ExperienceSection />
+        <LanguagesSection />
       </v-col>
 
       <v-col>
-        <f-div class="text-body-1">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis,
-          dicta porro sint voluptatem esse praesentium temporibus vel omnis
-          facilis possimus adipisci at dolorum amet minus nulla. Iure quo
-          ducimus expedita!
-        </f-div>
+        <SkillsSection />
       </v-col>
     </v-row>
   </v-container>
@@ -57,6 +53,8 @@ import LinkElement from "./LinkElement.vue";
 
 import { useDisplay } from "vuetify";
 import ExperienceSection from "./ExperienceSection.vue";
+import LanguagesSection from "./LanguagesSection.vue";
+import SkillsSection from "./SkillsSection.vue";
 
 const { xs } = useDisplay();
 
