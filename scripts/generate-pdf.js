@@ -6,7 +6,7 @@ async function createPdf(url) {
   await page.goto(url, { waitUntil: "networkidle0" });
   await page.pdf({
     path: "./public/madhu-km-resume.pdf",
-    scale: 0.906, // Adjust scale as much as you'd want depending on your resume size, and make it fit into A4
+    scale: 0.89, // Adjust scale as much as you'd want depending on your resume size, and make it fit into A4
     printBackground: true,
   });
   await browser.close();

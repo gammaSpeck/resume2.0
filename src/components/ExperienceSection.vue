@@ -64,7 +64,7 @@ const ollionExps = [
     id: 1,
     title: "Lead Product Developer",
     timeline: "Apr 2023 - Present",
-    desc: "Orchestrated the end-to-end management of code and infrastructure for all front-end microservices, adeptly led a team of two skilled front-end developers, and represented the product at international tech events to drive market visibility and engagement.",
+    desc: "Orchestrated the end-to-end management of code and infrastructure for all front-end microservices, led a team of two skilled developers, completed the entire project migration from Vue 2 to Vue 3, and represented the product at international tech events to drive market visibility and engagement.",
   },
   {
     id: 2,
