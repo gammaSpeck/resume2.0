@@ -6,18 +6,11 @@ This is a resume app built using Vue, Vite, and TypeScript. It allows you to ren
 
 To set up the project, follow these steps:
 
-1. Clone the repository:
+Install the dependencies:
 
-   ```sh
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
-
-2. Install the dependencies:
-
-   ```sh
-   pnpm install
-   ```
+```sh
+pnpm install
+```
 
 ## Development
 
@@ -55,4 +48,4 @@ Contributions are welcome! Please submit a pull request or open an issue for any
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
