@@ -6,10 +6,16 @@
       SKILLS
     </div>
 
-    <div class="d-flex flex-column justify-start ga-1">
+    <div class="d-flex flex-column justify-start ga-2">
       <SkillCard heading="Coding languages" :skills="codingLanguages" />
+      <v-divider />
+
       <SkillCard heading="Frontend" :skills="frontend" />
+      <v-divider />
+
       <SkillCard heading="Backend" :skills="backend" />
+      <v-divider />
+
       <SkillCard heading="Devops" :skills="devops" />
     </div>
   </div>
@@ -51,5 +57,13 @@ const backend = [
   "NATS",
 ];
 
-const devops = ["AWS", "CICD", "Docker", "Kubernetes", "HELM", "Jenkins"];
+const devops = [
+  "AWS",
+  "CICD",
+  "Docker",
+  "Kubernetes",
+  "HELM",
+  "Terraform",
+  "Jenkins",
+];
 </script>

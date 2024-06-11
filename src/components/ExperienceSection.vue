@@ -6,7 +6,7 @@
       EXPERIENCE
     </div>
 
-    <div class="d-flex flex-column justify-start ga-5">
+    <div class="d-flex flex-column justify-start ga-2">
       <div class="d-flex flex-column">
         <div class="d-flex flex-column">
           <div class="text-h6 font-weight-medium text-primary">Ollion</div>

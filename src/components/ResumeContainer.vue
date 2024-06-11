@@ -7,6 +7,11 @@
           <div class="text-h5 font-weight-bold text-primary">
             Full Stack Developer
           </div>
+          <div class="text-body-2">
+            Tech aficionado embracing the full-stack frenzy of
+            2024—conceptualizing, R&D, coding, testing, and cloud deployment. A
+            one-person IT army, reveling in the end-to-end adventure.
+          </div>
         </div>
 
         <div class="d-flex flex-wrap gc-4">
@@ -40,8 +45,9 @@
         <LanguagesSection />
       </v-col>
 
-      <v-col>
+      <v-col class="d-flex flex-column ga-4">
         <SkillsSection />
+        <EducationSection />
       </v-col>
     </v-row>
   </v-container>
@@ -49,12 +55,15 @@
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import LinkElement from "./LinkElement.vue";
 
 import { useDisplay } from "vuetify";
+
+import LinkElement from "./LinkElement.vue";
+
 import ExperienceSection from "./ExperienceSection.vue";
 import LanguagesSection from "./LanguagesSection.vue";
 import SkillsSection from "./SkillsSection.vue";
+import EducationSection from "./EducationSection.vue";
 
 const { xs } = useDisplay();
 
@@ -91,7 +100,6 @@ watch(xs, (isXs) => {
 
 <style scoped lang="scss">
 .container {
-  // height: 100%;
   background-color: #fff;
   max-width: 960px;
   min-height: 1123px;
@@ -101,7 +109,7 @@ watch(xs, (isXs) => {
   border-style: solid;
   border-width: 0.8px;
 
-  padding: 2.5rem;
+  padding: 2rem;
 
   @media (max-width: 600px) {
     // Breakpoint for sm and below
