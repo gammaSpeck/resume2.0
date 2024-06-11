@@ -1,13 +1,16 @@
 {
   "name": "resume2.0",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pdf-gen": "node ./scripts/generate-pdf.js"
   },
   "dependencies": {
     "@mdi/font": "6.2.95",
+    "puppeteer": "^22.10.1",
     "roboto-fontface": "*",
     "vue": "^3.4.21",
     "vuetify": "^3.5.8"

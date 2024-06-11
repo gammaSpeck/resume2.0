@@ -6,7 +6,8 @@
         Full Stack Developer
       </div>
       <div class="text-body-2">
-        Tech aficionado embracing the full-stack frenzy of
+        Tech aficionado with 5+ years of experience embracing the full-stack
+        frenzy of
         {{ new Date().getFullYear() }}—conceptualizing, R&D, coding, testing,
         and cloud deployment. A one-person IT army, reveling in the end-to-end
         adventure.

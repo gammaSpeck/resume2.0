@@ -1,7 +1,12 @@
 <template>
   <v-app>
     <v-main class="main-container">
-      <v-fab color="primary" icon="mdi-download" class="download-fab"></v-fab>
+      <v-fab
+        color="primary"
+        icon="mdi-download"
+        class="download-fab"
+        @click="downloadResume"
+      ></v-fab>
       <ResumeContainer />
     </v-main>
   </v-app>
@@ -9,6 +14,15 @@
 
 <script setup lang="ts">
 import ResumeContainer from "./components/ResumeContainer.vue";
+
+function downloadResume() {
+  const link = document.createElement("a");
+  link.href = "/madhu-km-resume.pdf";
+  link.download = "madhu-km-resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 </script>
 
 <style scoped lang="scss">
