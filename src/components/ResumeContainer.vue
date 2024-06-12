@@ -1,13 +1,12 @@
 <template>
   <v-container class="container">
     <v-row>
-      <v-col xs="12" sm="8" md="8" :order="colOrder.info">
+      <v-col :cols="topColSpan" :order="topColOrders.info">
         <AboutSection />
       </v-col>
 
       <v-col
-        :order="colOrder.image"
-        md="4"
+        :order="topColOrders.image"
         align-self="center"
         class="d-flex align-center justify-center"
       >
@@ -34,8 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue";
-
+import { ref, watch, onMounted } from "vue";
 import { useDisplay } from "vuetify";
 
 import ExperienceSection from "./ExperienceSection.vue";
@@ -44,17 +42,25 @@ import SkillsSection from "./SkillsSection.vue";
 import EducationSection from "./EducationSection.vue";
 import AboutSection from "./AboutSection.vue";
 
-const { xs } = useDisplay();
+const { mobile } = useDisplay({ mobileBreakpoint: 600 });
 
-const colOrder = ref({ image: 2, info: 1 });
-const DEFAULT_COL_SPAN = 7;
-const leftSectionColSpan = ref(DEFAULT_COL_SPAN);
+const topColOrders = ref({ image: 2, info: 1 });
+
+const DEFAULT_BOTTOM_COL_SPAN = 7;
+const DEFAULT_TOP_COL_SPAN = 8;
+
+const leftSectionColSpan = ref(DEFAULT_BOTTOM_COL_SPAN);
+const topColSpan = ref(DEFAULT_TOP_COL_SPAN);
+
+function syncScreenSizeDimensions(isMobile: boolean) {
+  topColOrders.value = isMobile ? { image: 1, info: 2 } : { image: 2, info: 1 };
+  leftSectionColSpan.value = isMobile ? 12 : DEFAULT_BOTTOM_COL_SPAN;
+  topColSpan.value = isMobile ? 12 : DEFAULT_TOP_COL_SPAN;
+}
 
 // Done to ensure in Responsive mode, the image comes on TOP
-watch(xs, (isXs) => {
-  colOrder.value = isXs ? { image: 1, info: 2 } : { image: 2, info: 1 };
-  leftSectionColSpan.value = isXs ? 12 : DEFAULT_COL_SPAN;
-});
+watch(mobile, syncScreenSizeDimensions);
+onMounted(() => syncScreenSizeDimensions(mobile.value));
 </script>
 
 <style scoped lang="scss">
