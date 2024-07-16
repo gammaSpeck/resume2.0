@@ -41,7 +41,7 @@ const education = [
     grade: "92%",
     school: "St Thomas Public School",
     from: "",
-    to: "2019",
+    to: "2013",
   },
 ];
 </script>
