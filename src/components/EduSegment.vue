@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column">
     <div class="d-flex justify-space-between align-center">
-      <div class="text-h6 font-weight-medium text-primary">
+      <div class="text-subtitle1 font-weight-bold text-primary">
         {{ degree }}
       </div>
       <div class="text-caption font-weight-medium">{{ grade }}</div>

@@ -1,5 +1,6 @@
 // Resume Configuration
 // Edit this file to customize your resume
+// Icons can be found at https://pictogrammers.com/library/mdi/
 
 // Basic Information
 export const personalInfo = {
@@ -118,14 +119,14 @@ export const skills = {
   ],
   frontend: [
     "Vue",
-    "Vite",
     "React",
     "NextJS",
     "Nuxt",
-    "MUI",
     "Cypress",
     "Playwright",
-    "Web Components"
+    "Web Components",
+    "Tailwind",
+    "PWA"
   ],
   backend: [
     "NodeJS",
@@ -152,6 +153,28 @@ export const skills = {
     "GitHub Actions"
   ]
 };
+
+// Projects
+export const projects = [
+  {
+    name: "AI Influencer Marketing Platform",
+    description:
+      "End-to-end influencer marketing automation platform with AI-powered creator discovery, automated outreach & negotiation, contract management with e-signatures, milestone-based payment processing, real-time performance analytics, and comprehensive campaign lifecycle management.",
+    links: [
+      { icon: "mdi-youtube", url: "https://www.loom.com/share/7f73e5f25cf44b809f45a316c49a24f0" },
+      { icon: "mdi-post-outline", url: "https://influencer-flow-ai.netlify.app" },
+      { icon: "mdi-web", url: "https://influencer-flow-ai.netlify.app" }
+    ]
+  },
+  {
+    name: "Expense Tracker PWA",
+    description: "Privacy-first, open source PWA for tracking and analyzing personal expenses.",
+    links: [
+      { icon: "mdi-github", url: "https://github.com/gammaSpeck/expense-tracker" },
+      { icon: "mdi-web", url: "https://extrack.madhukm.com" }
+    ]
+  }
+];
 
 // Education
 export const education = [

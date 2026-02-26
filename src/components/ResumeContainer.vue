@@ -25,6 +25,7 @@
       </v-col>
 
       <v-col class="d-flex flex-column ga-2">
+        <ProjectsSection />
         <SkillsSection />
         <EducationSection />
       </v-col>
@@ -42,6 +43,7 @@ import SkillsSection from "./SkillsSection.vue";
 import EducationSection from "./EducationSection.vue";
 import AboutSection from "./AboutSection.vue";
 import { personalInfo, themeSettings } from "../config/resumeConfig";
+import ProjectsSection from "./ProjectsSection.vue";
 
 const { mobile } = useDisplay({ mobileBreakpoint: 600 });
 

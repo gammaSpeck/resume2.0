@@ -7,7 +7,7 @@
     <div class="d-flex flex-column justify-start ga-1">
       <div class="d-flex flex-column" v-for="(section, index) in experience.sections" :key="index">
         <div class="d-flex flex-column">
-          <div class="text-h6 font-weight-medium text-primary">
+          <div class="text-subtitle1 font-weight-bold text-primary">
             {{ section.company }}
           </div>
           <!-- <div class="text-body-2 d-inline-flex gc-1" v-if="section.summary">

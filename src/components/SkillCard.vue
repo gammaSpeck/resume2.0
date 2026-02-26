@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column">
-    <div class="text-h6 font-weight-medium text-primary">{{ heading }}</div>
+    <div class="text-subtitle1 font-weight-bold text-primary">{{ heading }}</div>
     <v-chip-group variant="tonal" column>
       <v-chip
         :key="title"
