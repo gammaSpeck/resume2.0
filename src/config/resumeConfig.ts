@@ -1,16 +1,15 @@
 // Resume Configuration
 // Edit this file to customize your resume
+// Icons can be found at https://pictogrammers.com/library/mdi/
 
 // Basic Information
 export const personalInfo = {
   firstName: "Madhusoodhanan",
   lastName: "KM",
-  title: "Full Stack Developer",
-  avatar: "avatar3.jpeg", // Place this file in src/assets
+  title: "Principal Engineer",
+  avatar: "md.jpeg", // Place this file in src/assets
   summary:
-    "Tech aficionado with 5+ years of experience embracing the full-stack frenzy of " +
-    new Date().getFullYear() +
-    "—conceptualizing, R&D, coding, testing, and cloud deployment. A one-person IT army, reveling in the end-to-end adventure.",
+    "Principal Engineer with 7+ years of experience architecting scalable platforms, leading distributed system design, and driving engineering excellence through DevOps automation and AI-driven development practices. Expert in end-to-end system design, cloud-native infrastructure, and building high-performance teams.",
   pdfFilename: "madhu-km-resume.pdf" // This will be used for both download and generation
 };
 
@@ -39,43 +38,51 @@ export const contactInfo = [
 export const experience = {
   sections: [
     {
+      company: "Louisa AI",
+      positions: [
+        {
+          id: 1,
+          title: "Principal Engineer",
+          timeline: "Mar 2025 - Present",
+          desc: "Architected Space-Time Overlaps system processing 1.4B+ relationship records with AI-powered multi-dimensional scoring. Designed scalable Graph Service handling millions of email relationships with separated Worker/API layers for independent horizontal scaling. Leading React 18 migration while reducing Docker image sizes by 72%. Established Grafana K6 as company-wide load testing standard with automated CI/CD pipelines and self-hosted runners. Deployed organization-wide automated release management using Release Please. Champion AI-driven development practices including GitHub Copilot adoption and implemented enterprise-wide CI/CD improvements with automated security scanning and streamlined Git workflows."
+        }
+      ]
+    },
+    {
       company: "Ollion",
-      summary: "Worked extensively on DataPipes which is a cloud native Data Management Platform.",
       positions: [
         {
           id: 1,
           title: "Lead Product Developer",
-          timeline: "Apr 2023 - Present",
-          desc: "Orchestrated the end-to-end management of code and infrastructure for all front-end microservices, led a team of two skilled developers, completed the entire project migration from Vue 2 to Vue 3, and represented the product at international tech events to drive market visibility and engagement."
+          timeline: "Apr 2023 - Mar 2025",
+          desc: "Core team of DataPipes - A cloud native Data Management Platform. Managed end-to-end code and infrastructure of microservices, led team of developers, and completed Vue2 to Vue3 migration. Represented product at international tech events."
         },
         {
           id: 2,
           title: "Senior Developer",
           timeline: "Apr 2022 - Apr 2023",
-          desc: "Owned multiple critical components, executed a comprehensive migration from Webpack to Vite, and collaborated closely with UX teams to enhance user experience and streamline front-end performance."
+          desc: "Owned critical components, spearheaded Webpack to Vite migration, and collaborated with UX teams to enhance user experience and front-end performance."
         },
         {
           id: 3,
           title: "Developer",
           timeline: "May 2021 - Apr 2022",
-          desc: "Contributed to the migration from JavaScript to TypeScript, optimized containerization processes, developed multiple web pages, and authored numerous REST APIs for the backend."
+          desc: "Led Javascript to Typescript migrations, optimized containerization, and developed web pages and REST APIs."
         }
       ]
     },
     {
       company: "Cardinal Health",
-      summary:
-        "Healthcare providers in the US use our software to communicate digitally with patients about their health.",
       positions: [
         {
           title: "Associate Software Engineer",
           timeline: "Jun 2019 - May 2021",
-          desc: "Built architectural frameworks in NodeJS and React.js, architected and deployed a project to Kubernetes while mentoring the team through the SDLC, designed and launched the MVP for an Admin Console used by clients and support teams, owned multiple components, and served as a technical interviewer for campus recruitment."
+          desc: "Built architectural frameworks in NodeJS and React.js, deployed to Kubernetes, designed and launched Admin Console MVP, and served as technical interviewer for campus recruitment."
         },
         {
           title: "Software Engineering Intern",
-          timeline: "Jan 2019 - Jun 2021",
-          desc: "Developed microservices using the Serverless Framework and created a shared repository of reusable modules."
+          timeline: "Jan 2019 - Jun 2019",
+          desc: "Developed microservices using Serverless Framework and created shared repository of reusable modules."
         }
       ]
     }
@@ -112,35 +119,71 @@ export const skills = {
   ],
   frontend: [
     "Vue",
-    "Vite",
     "React",
     "NextJS",
     "Nuxt",
-    "MUI",
     "Cypress",
     "Playwright",
-    "Web Components"
+    "Web Components",
+    "Tailwind",
+    "PWA"
   ],
   backend: [
     "NodeJS",
     "Express",
     "NestJS",
-    "FastAPI",
-    "OpenAPI Spec",
     "WebSockets",
     "Serverless",
-    "RDBMS",
+    "Postgres",
     "Neo4j",
     "MongoDB",
-    "NATS"
+    "NATS",
+    "Redis"
   ],
-  devops: ["AWS", "CICD", "Docker", "Kubernetes", "HELM", "Terraform", "Jenkins", "k6", "Grafana"]
+  devops: [
+    "AWS",
+    "CICD",
+    "Docker",
+    "Kubernetes",
+    "HELM",
+    "Terraform",
+    "Jenkins",
+    "k6",
+    "Grafana",
+    "GitHub Actions"
+  ]
 };
+
+// Projects
+export const projects = [
+  {
+    name: "AI Influencer Marketing Platform",
+    description:
+      "End-to-end influencer marketing automation platform with AI-powered creator discovery, automated outreach & negotiation, contract management with e-signatures, milestone-based payment processing, real-time performance analytics, and comprehensive campaign lifecycle management.",
+    links: [
+      { icon: "mdi-youtube", url: "https://www.loom.com/share/7f73e5f25cf44b809f45a316c49a24f0" },
+      {
+        icon: "mdi-post-outline",
+        url: "https://medium.com/@hjqwjc/how-to-launch-an-ai-product-in-21-days-371c71b2f794"
+      },
+      { icon: "mdi-web", url: "https://influencer-flow-ai.netlify.app" }
+    ]
+  },
+  {
+    name: "Expense Tracker PWA",
+    description:
+      "Privacy-first, open source PWA for tracking and analyzing personal expenses. No accounts, no backend, pure client-side financial management with data stored locally for complete user privacy.",
+    links: [
+      { icon: "mdi-github", url: "https://github.com/gammaSpeck/expense-tracker" },
+      { icon: "mdi-web", url: "https://extrack.madhukm.com" }
+    ]
+  }
+];
 
 // Education
 export const education = [
   {
-    degree: "Bachelors in CS Engineering",
+    degree: "Bachelors in CSE",
     grade: "CGPA 7.3/10",
     school: "CMRIT",
     from: "2015",

@@ -10,7 +10,7 @@
         align-self="center"
         class="d-flex align-center justify-center"
       >
-        <v-avatar size="125">
+        <v-avatar size="150">
           <v-img :alt="fullName" :src="avatarPath"></v-img>
         </v-avatar>
       </v-col>
@@ -19,12 +19,13 @@
     <!-- ********** -->
 
     <v-row>
-      <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-4">
+      <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-2">
         <ExperienceSection />
         <LanguagesSection />
       </v-col>
 
-      <v-col class="d-flex flex-column ga-4">
+      <v-col class="d-flex flex-column ga-2">
+        <ProjectsSection />
         <SkillsSection />
         <EducationSection />
       </v-col>
@@ -42,6 +43,7 @@ import SkillsSection from "./SkillsSection.vue";
 import EducationSection from "./EducationSection.vue";
 import AboutSection from "./AboutSection.vue";
 import { personalInfo, themeSettings } from "../config/resumeConfig";
+import ProjectsSection from "./ProjectsSection.vue";
 
 const { mobile } = useDisplay({ mobileBreakpoint: 600 });
 
@@ -63,9 +65,7 @@ function syncScreenSizeDimensions(isMobile: boolean) {
 const avatarPath = computed(
   () => new URL(`../assets/${personalInfo.avatar}`, import.meta.url).href
 );
-const fullName = computed(
-  () => `${personalInfo.firstName} ${personalInfo.lastName}`
-);
+const fullName = computed(() => `${personalInfo.firstName} ${personalInfo.lastName}`);
 
 // Done to ensure in Responsive mode, the image comes on TOP
 watch(mobile, syncScreenSizeDimensions);
@@ -73,22 +73,10 @@ onMounted(() => {
   syncScreenSizeDimensions(mobile.value);
 
   // Apply theme settings
-  document.documentElement.style.setProperty(
-    "--primary-color",
-    themeSettings.primaryColor
-  );
-  document.documentElement.style.setProperty(
-    "--background-color",
-    themeSettings.backgroundColor
-  );
-  document.documentElement.style.setProperty(
-    "--text-color",
-    themeSettings.textColor
-  );
-  document.documentElement.style.setProperty(
-    "--accent-color",
-    themeSettings.accentColor
-  );
+  document.documentElement.style.setProperty("--primary-color", themeSettings.primaryColor);
+  document.documentElement.style.setProperty("--background-color", themeSettings.backgroundColor);
+  document.documentElement.style.setProperty("--text-color", themeSettings.textColor);
+  document.documentElement.style.setProperty("--accent-color", themeSettings.accentColor);
 });
 </script>
 
