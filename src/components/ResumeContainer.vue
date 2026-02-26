@@ -10,7 +10,7 @@
         align-self="center"
         class="d-flex align-center justify-center"
       >
-        <v-avatar size="125">
+        <v-avatar size="150">
           <v-img :alt="fullName" :src="avatarPath"></v-img>
         </v-avatar>
       </v-col>

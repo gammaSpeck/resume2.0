@@ -7,7 +7,7 @@ export const personalInfo = {
   firstName: "Madhusoodhanan",
   lastName: "KM",
   title: "Principal Engineer",
-  avatar: "avatar3.jpeg", // Place this file in src/assets
+  avatar: "md.jpeg", // Place this file in src/assets
   summary:
     "Principal Engineer with 7+ years of experience architecting scalable platforms, leading distributed system design, and driving engineering excellence through DevOps automation and AI-driven development practices. Expert in end-to-end system design, cloud-native infrastructure, and building high-performance teams.",
   pdfFilename: "madhu-km-resume.pdf" // This will be used for both download and generation
@@ -162,13 +162,17 @@ export const projects = [
       "End-to-end influencer marketing automation platform with AI-powered creator discovery, automated outreach & negotiation, contract management with e-signatures, milestone-based payment processing, real-time performance analytics, and comprehensive campaign lifecycle management.",
     links: [
       { icon: "mdi-youtube", url: "https://www.loom.com/share/7f73e5f25cf44b809f45a316c49a24f0" },
-      { icon: "mdi-post-outline", url: "https://influencer-flow-ai.netlify.app" },
+      {
+        icon: "mdi-post-outline",
+        url: "https://medium.com/@hjqwjc/how-to-launch-an-ai-product-in-21-days-371c71b2f794"
+      },
       { icon: "mdi-web", url: "https://influencer-flow-ai.netlify.app" }
     ]
   },
   {
     name: "Expense Tracker PWA",
-    description: "Privacy-first, open source PWA for tracking and analyzing personal expenses.",
+    description:
+      "Privacy-first, open source PWA for tracking and analyzing personal expenses. No accounts, no backend, pure client-side financial management with data stored locally for complete user privacy.",
     links: [
       { icon: "mdi-github", url: "https://github.com/gammaSpeck/expense-tracker" },
       { icon: "mdi-web", url: "https://extrack.madhukm.com" }
