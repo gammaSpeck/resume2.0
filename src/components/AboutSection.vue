@@ -2,7 +2,7 @@
   <div>
     <div class="d-flex-inline mb-1">
       <div class="text-h4 font-weight-bold">{{ fullName }}</div>
-      <div class="text-h5 font-weight-bold text-primary">
+      <div class="text-h6 font-weight-bold text-primary">
         {{ personalInfo.title }}
       </div>
       <div class="text-body-2">
@@ -24,8 +24,8 @@
 
 <script setup lang="ts">
 import LinkElement from "./LinkElement.vue";
-import { personalInfo, contactInfo } from '../config/resumeConfig';
-import { computed } from 'vue';
+import { personalInfo, contactInfo } from "../config/resumeConfig";
+import { computed } from "vue";
 
 const fullName = computed(() => `${personalInfo.firstName} ${personalInfo.lastName}`);
 </script>

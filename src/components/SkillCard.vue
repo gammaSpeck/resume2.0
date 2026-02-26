@@ -4,7 +4,7 @@
     <v-chip-group variant="tonal" column>
       <v-chip
         :key="title"
-        size="small"
+        size="x-small"
         v-for="{ title, icon } in computedSkills"
         :prepend-icon="icon"
       >

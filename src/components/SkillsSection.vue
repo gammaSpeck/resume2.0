@@ -1,20 +1,16 @@
 <template>
   <div class="d-flex flex-column ga-2 w-100">
-    <div
-      class="text-h5 font-weight-bold text-uppercase border-b-lg border-opacity-100"
-    >
-      SKILLS
-    </div>
+    <div class="text-h6 font-weight-bold text-uppercase border-b-lg border-opacity-100">SKILLS</div>
 
-    <div class="d-flex flex-column justify-start ga-2">
+    <div class="d-flex flex-column justify-start">
       <SkillCard heading="Coding languages" :skills="skills.codingLanguages" />
-      <v-divider />
+      <!-- <v-divider /> -->
 
       <SkillCard heading="Frontend" :skills="skills.frontend" />
-      <v-divider />
+      <!-- <v-divider /> -->
 
       <SkillCard heading="Backend" :skills="skills.backend" />
-      <v-divider />
+      <!-- <v-divider /> -->
 
       <SkillCard heading="Devops" :skills="skills.devops" />
     </div>
@@ -23,5 +19,5 @@
 
 <script setup lang="ts">
 import SkillCard from "./SkillCard.vue";
-import { skills } from '../config/resumeConfig';
+import { skills } from "../config/resumeConfig";
 </script>

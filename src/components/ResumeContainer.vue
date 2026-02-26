@@ -19,12 +19,12 @@
     <!-- ********** -->
 
     <v-row>
-      <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-4">
+      <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-2">
         <ExperienceSection />
         <LanguagesSection />
       </v-col>
 
-      <v-col class="d-flex flex-column ga-4">
+      <v-col class="d-flex flex-column ga-2">
         <SkillsSection />
         <EducationSection />
       </v-col>
@@ -63,9 +63,7 @@ function syncScreenSizeDimensions(isMobile: boolean) {
 const avatarPath = computed(
   () => new URL(`../assets/${personalInfo.avatar}`, import.meta.url).href
 );
-const fullName = computed(
-  () => `${personalInfo.firstName} ${personalInfo.lastName}`
-);
+const fullName = computed(() => `${personalInfo.firstName} ${personalInfo.lastName}`);
 
 // Done to ensure in Responsive mode, the image comes on TOP
 watch(mobile, syncScreenSizeDimensions);
@@ -73,22 +71,10 @@ onMounted(() => {
   syncScreenSizeDimensions(mobile.value);
 
   // Apply theme settings
-  document.documentElement.style.setProperty(
-    "--primary-color",
-    themeSettings.primaryColor
-  );
-  document.documentElement.style.setProperty(
-    "--background-color",
-    themeSettings.backgroundColor
-  );
-  document.documentElement.style.setProperty(
-    "--text-color",
-    themeSettings.textColor
-  );
-  document.documentElement.style.setProperty(
-    "--accent-color",
-    themeSettings.accentColor
-  );
+  document.documentElement.style.setProperty("--primary-color", themeSettings.primaryColor);
+  document.documentElement.style.setProperty("--background-color", themeSettings.backgroundColor);
+  document.documentElement.style.setProperty("--text-color", themeSettings.textColor);
+  document.documentElement.style.setProperty("--accent-color", themeSettings.accentColor);
 });
 </script>
 
