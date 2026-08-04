@@ -9,7 +9,7 @@ export const personalInfo = {
   title: "Principal Engineer",
   avatar: "md.jpeg", // Place this file in src/assets
   summary:
-    "Principal Engineer with 7+ years of experience architecting scalable platforms, leading distributed system design, and driving engineering excellence through DevOps automation and AI-driven development practices. Expert in end-to-end system design, cloud-native infrastructure, and building high-performance teams.",
+    "Principal Engineer with 7+ years architecting scalable platforms that are AI-native, agentic systems, RAG pipelines on distributed, cloud-native infrastructure. Drives AI-first engineering culture who automates the SDLC end-to-end, and leads high-performance teams.",
   pdfFilename: "madhu-km-resume.pdf" // This will be used for both download and generation
 };
 
@@ -44,7 +44,7 @@ export const experience = {
           id: 1,
           title: "Principal Engineer",
           timeline: "Mar 2025 - Present",
-          desc: "Architected Space-Time Overlaps system processing 1.4B+ relationship records with AI-powered multi-dimensional scoring. Designed scalable Graph Service handling millions of email relationships with separated Worker/API layers for independent horizontal scaling. Leading React 18 migration while reducing Docker image sizes by 72%. Established Grafana K6 as company-wide load testing standard with automated CI/CD pipelines and self-hosted runners. Deployed organization-wide automated release management using Release Please. Champion AI-driven development practices including GitHub Copilot adoption and implemented enterprise-wide CI/CD improvements with automated security scanning and streamlined Git workflows."
+          desc: "Run lean teams shipping AI at scale. Architected Space-Time Overlaps scoring 1.4B+ relationship records, and a Graph Service over millions of email relationships with separated Worker/API layers for independent horizontal scaling. Shipped AI agents with multi-tool-call orchestration and MCP servers exposing external connectors. Set perf testing standards and deployed organization-wide automated release management using Release Please"
         }
       ]
     },
@@ -55,19 +55,19 @@ export const experience = {
           id: 1,
           title: "Lead Product Developer",
           timeline: "Apr 2023 - Mar 2025",
-          desc: "Core team of DataPipes - A cloud native Data Management Platform. Managed end-to-end code and infrastructure of microservices, led team of developers, and completed Vue2 to Vue3 migration. Represented product at international tech events."
+          desc: "Core team of DataPipes, a cloud-native Data Management Platform. Led developers, owned microservice code and infra, drove Vue2 to Vue3 migration, managed pre-sales at international tech events."
         },
         {
           id: 2,
           title: "Senior Developer",
           timeline: "Apr 2022 - Apr 2023",
-          desc: "Owned critical components, spearheaded Webpack to Vite migration, and collaborated with UX teams to enhance user experience and front-end performance."
+          desc: "Owned critical components, spearheaded Webpack to Vite migration, partnered with UX on front-end performance."
         },
         {
           id: 3,
           title: "Developer",
           timeline: "May 2021 - Apr 2022",
-          desc: "Led Javascript to Typescript migrations, optimized containerization, and developed web pages and REST APIs."
+          desc: "Led Javascript to Typescript migrations, optimized containerization, built web pages and REST APIs."
         }
       ]
     },
@@ -77,12 +77,12 @@ export const experience = {
         {
           title: "Associate Software Engineer",
           timeline: "Jun 2019 - May 2021",
-          desc: "Built architectural frameworks in NodeJS and React.js, deployed to Kubernetes, designed and launched Admin Console MVP, and served as technical interviewer for campus recruitment."
+          desc: "Deployed NodeJS/React systems on k8s, launched the Admin Console MVP, served as technical interviewer for campus recruitment drives. Automated on-call systems to reduce resolution times from > 30 mins to <1 min."
         },
         {
           title: "Software Engineering Intern",
           timeline: "Jan 2019 - Jun 2019",
-          desc: "Developed microservices using Serverless Framework and created shared repository of reusable modules."
+          desc: "Built Serverless Framework microservices and a shared library of reusable modules."
         }
       ]
     }
@@ -112,50 +112,38 @@ export const languages = [
 // Skills
 export const skills = {
   codingLanguages: [
-    { title: "Javascript", icon: "mdi-language-javascript" },
     { title: "Typescript", icon: "mdi-language-typescript" },
+    { title: "Javascript", icon: "mdi-language-javascript" },
     { title: "Python", icon: "mdi-language-python" },
-    { title: "Shell", icon: "mdi-powershell" }
+    { title: "Shellscript", icon: "mdi-powershell" }
   ],
-  frontend: [
-    "Vue",
-    "React",
-    "NextJS",
-    "Nuxt",
-    "Cypress",
-    "Playwright",
-    "Web Components",
-    "Tailwind",
-    "PWA"
-  ],
+  frontend: ["Vue", "React", "Vite", "SSR", "Playwright", "PWA"],
   backend: [
     "NodeJS",
+    "Bun",
+    "Hono",
+    "ORPC",
     "Express",
     "NestJS",
     "WebSockets",
-    "Serverless",
     "Postgres",
     "Neo4j",
-    "MongoDB",
     "NATS",
-    "Redis"
+    "Redis",
+    "Airflow",
+    "Pyspark"
   ],
-  devops: [
-    "AWS",
-    "CICD",
-    "Docker",
-    "Kubernetes",
-    "HELM",
-    "Terraform",
-    "Jenkins",
-    "k6",
-    "Grafana",
-    "GitHub Actions"
-  ]
+  devops: ["AWS", "GCP", "CICD", "Docker", "k8s", "HELM", "Terraform", "GitHub Actions"],
+  ai: ["RAG", "pgvector", "Embeddings", "Evals", "Agentic AI", "MCP", "Mastra AI", "AI Workflows"]
 };
 
 // Projects
 export const projects = [
+  {
+    name: "3rdAI",
+    description:
+      "Semantic lyric based AI search & research platform for song discovery and cross language playlist generation over millions of songs, 129-language corpus."
+  },
   {
     name: "AI Influencer Marketing Platform",
     description:
@@ -172,10 +160,14 @@ export const projects = [
   {
     name: "Expense Tracker PWA",
     description:
-      "Privacy-first, open source PWA for tracking and analyzing personal expenses. No accounts, no backend, pure client-side financial management with data stored locally for complete user privacy.",
+      "Privacy-first, open-source PWA for tracking and analyzing personal expenses. No accounts, no backend; all data stays on device. E2EE encrypted.",
     links: [
       { icon: "mdi-github", url: "https://github.com/gammaSpeck/expense-tracker" },
-      { icon: "mdi-web", url: "https://extrack.madhukm.com" }
+      { icon: "mdi-web", url: "https://extrack.madhukm.com" },
+      {
+        icon: "mdi-post-outline",
+        url: "https://forum.fossunited.org/t/introducing-extrack-simple-private-expense-tracking/7576"
+      }
     ]
   }
 ];
@@ -188,20 +180,6 @@ export const education = [
     school: "CMRIT",
     from: "2015",
     to: "2019"
-  },
-  {
-    degree: "PUC - PCMB",
-    grade: "84%",
-    school: "Christ Junior College",
-    from: "2013",
-    to: "2015"
-  },
-  {
-    degree: "Secondary Education",
-    grade: "92%",
-    school: "St Thomas Public School",
-    from: "",
-    to: "2013"
   }
 ];
 

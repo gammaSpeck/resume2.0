@@ -9,11 +9,14 @@ import vueDevTools from "vite-plugin-vue-devtools";
 import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
 
-// https://vitejs.dev/config/
+// ponytail: single VITE_PDF_GEN flag also hides the download FAB (App.vue) —
+// same env var, read once here and once client-side via import.meta.env.
+const isPdfGen = process.env.VITE_PDF_GEN === "true";
+
 export default defineConfig({
   plugins: [
     Vue({ template: { transformAssetUrls } }),
-    vueDevTools(),
+    ...(isPdfGen ? [] : [vueDevTools()]),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify(),
     Components(),

@@ -6,7 +6,7 @@
     "dev": "vite -- --host",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "pdf-gen": "node ./scripts/generate-pdf.js",
+    "pdf-gen": "VITE_PDF_GEN=true node ./scripts/generate-pdf.js",
     "format": "prettier --write \"src/**/*.{ts,mts,js,jsx,json,css,md}\""
   },
   "dependencies": {

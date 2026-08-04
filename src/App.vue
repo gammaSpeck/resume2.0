@@ -2,6 +2,7 @@
   <v-app>
     <v-main class="main-container">
       <v-fab
+        v-if="!isPdfGen"
         color="primary"
         icon="mdi-download"
         class="download-fab"
@@ -16,6 +17,7 @@
 import ResumeContainer from "./components/ResumeContainer.vue";
 import { personalInfo } from "./config/resumeConfig";
 
+const isPdfGen = import.meta.env.VITE_PDF_GEN === "true";
 function downloadResume() {
   const link = document.createElement("a");
   link.href = `/${personalInfo.pdfFilename}`;

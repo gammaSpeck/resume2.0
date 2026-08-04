@@ -49,7 +49,7 @@ const { mobile } = useDisplay({ mobileBreakpoint: 600 });
 
 const topColOrders = ref({ image: 2, info: 1 });
 
-const DEFAULT_BOTTOM_COL_SPAN = 7;
+const DEFAULT_BOTTOM_COL_SPAN = 6;
 const DEFAULT_TOP_COL_SPAN = 8;
 
 const leftSectionColSpan = ref(DEFAULT_BOTTOM_COL_SPAN);

@@ -3,6 +3,7 @@
     <div class="text-h6 font-weight-bold text-uppercase border-b-lg border-opacity-100">SKILLS</div>
 
     <div class="d-flex flex-column justify-start">
+
       <SkillCard heading="Coding languages" :skills="skills.codingLanguages" />
       <!-- <v-divider /> -->
 
@@ -13,6 +14,8 @@
       <!-- <v-divider /> -->
 
       <SkillCard heading="Devops" :skills="skills.devops" />
+
+      <SkillCard heading="AI" :skills="skills.ai" />
     </div>
   </div>
 </template>
